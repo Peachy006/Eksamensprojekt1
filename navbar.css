@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    border-bottom: 2px solid black;
+    background: #af9164;
+}
+
+.navbar > div:first-child {
+    width: 30%;
+}
+
+
+.navdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Big Shoulders";
+    font-size: 3.5rem;
+    font-weight: 300;
+}
+
+.navbar > div:last-child {
+    width: 70%;
+    justify-content: flex-end;
+    gap: 3rem;
+    padding-right: 30px;
+}
+
+.navdiv a {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    text-align: center;
+    font-family: "Big Shoulders";
+    font-size: 3.5rem;
+    font-weight: 200;
+}
+
+
+
+.menudiv {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Big Shoulders";
+    font-size: 3.5rem;
+    font-weight: 300;
+    height: 100vh;
+    width: 100vw;
+    top: -100vh;
+    background: green;
+    transition: .5s linear all;
+    z-index: 100;
+}
+
+.menuitem {
+
+}
+
+#smallscreenNavElement {
+    z-index: 200;
+}
+
+
+
+
+/* Menu icon here ----------------------------------------------------------------------------------- */
+
+label{
+    display:flex;
+     flex-direction:column;
+     width:70px;
+     cursor:pointer;
+   }
+   
+   label span{
+     background: #fff;
+     border-radius:10px;
+     height:7px;
+     margin: 7px 0;
+     transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+   
+   }
+   
+   
+   span:nth-of-type(1){
+     width:50%;
+     
+   }
+   
+   span:nth-of-type(2){
+     width:100%;
+   }
+   
+   
+   span:nth-of-type(3){
+     width:75%;
+    
+   }
+   
+   
+   input[type="checkbox"]{
+     display:none;
+   }
+   
+   
+   input[type="checkbox"]:checked ~ span:nth-of-type(1){
+     transform-origin:bottom;
+     transform:rotatez(45deg) translate(8px,0px)
+   }
+   
+   
+   input[type="checkbox"]:checked ~ span:nth-of-type(2){
+     
+     transform-origin:top;
+     transform:rotatez(-45deg)
+   }
+   
+   
+   input[type="checkbox"]:checked ~ span:nth-of-type(3){
+     
+     transform-origin:bottom;
+     width:50%;
+     transform: translate(30px,-11px) rotatez(45deg);
+   
+   }
+
+@media screen and (max-width: 970px) {
+    .navbar .bigscreenNavElement {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 970px) {
+    .navbar #smallscreenNavElement {
+        display: none;
+    }
+
+    .menudiv     {
+        display: none;
+    }
+}

@@ -4,11 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eksamensprojekt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="navbar.css">
 </head>
 <body>
-    <div class="container">
+    <div class="menudiv" id="menudiv">
+            <div class="menuitem">
+                <a href="index.html" class="menuitema">Hjem</a>
+            </div>
+            <div class="menuitem">
+                <a href="omos.html" class="menuitema">Om os</a>
+            </div>
+            <div class="menuitem">
+                <a href="menu.html" class="menuitema">Menu</a>
+            </div>
+            <div class="menuitem">
+                <a href="bestil.html" class="menuitema">Bestil</a>
+            </div>
+            <div class="menuitem">
+                <a href="kontakt.html" class="menuitema">Kontakt</a>
+            </div>
+            <div class="menuitem">
+                <a class="menuitema" href="#" onclick="toggleMenu()">Luk Menu</a>
+            </div>
+    </div>
+    <div class="navbar">
+        <div class="navdiv">
+            Bindu
+        </div>
+        <div class="navdiv">
+            <a href="index.html" class="bigscreenNavElement">Hjem</a>
+            <a href="index.html" class="bigscreenNavElement">Om os</a>
+            <a href="index.html" class="bigscreenNavElement">Menu</a>
+            <a href="index.html" class="bigscreenNavElement">Bestil</a>
+            <a href="index.html" class="bigscreenNavElement">Kontakt</a>
+            <a id="smallscreenNavElement" href="#" onclick="toggleMenu()">
+                <label for="check">
+                    <input type="checkbox" id="check" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </a>
+            
 
+        </div>
+    </div>
+    <div class="container">
+        
     </div>
     <script src="script.js"></script>
 </body>
