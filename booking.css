@@ -87,6 +87,7 @@
     margin-bottom: 0.5rem;
     font-weight: 500;
     color: var(--dark);
+    width: 100%;
   }
   
   .form-group input,

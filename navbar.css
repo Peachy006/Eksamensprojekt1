@@ -9,6 +9,7 @@
 body {
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 /* Navbar styles ------------------------------------ */
@@ -44,13 +45,13 @@ body {
 }
 
 .navdiv a {
-    color: black;
+    color: #333;
     text-decoration: none;
     display: flex;
     text-align: center;
     font-family: "Big Shoulders";
-    font-size: 3.5rem;
-    font-weight: 200;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 

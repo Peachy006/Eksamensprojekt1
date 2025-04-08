@@ -10,6 +10,8 @@
     --input-border: #e0e0e0;
     --input-focus: #cccccc;
   }
+
+
   
   /* Contact Section Styles */
   .contact-section {
@@ -20,6 +22,10 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+  }
+
+  h2 {
+    font-family: "Big shoulders";
   }
   
   .contact-content {
@@ -33,6 +39,7 @@
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: var(--dark-text);
+    font-family: "Big shoulders";
   }
   
   .highlight {
@@ -116,23 +123,26 @@
   /* Social Links */
   .social-links {
     display: flex;
-    justify-content: center;
+    align-items: center;
     gap: 1rem;
     margin-top: 2rem;
+    flex-direction: column;
   }
   
   .social-link {
-    width: 40px;
+    width: 400px;
     height: 40px;
     background-color: var(--primary-sand);
     color: var(--light-text);
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
     transition: all var(--transition-speed);
     text-decoration: none;
+    font-family: "Big shoulders";
+    letter-spacing: 1.5px;
+    font-size: 1.5rem;
   }
   
   .social-link:hover {
@@ -176,6 +186,7 @@
     margin-bottom: 0.5rem;
     color: var(--dark-text);
     font-weight: 500;
+    width: 100%;
   }
   
   .form-group input,
@@ -320,3 +331,9 @@
       margin-bottom: 0.5rem;
     }
   }
+
+  #formMessage {
+    display: none;
+    margin-top: 10px;
+  }
+  

@@ -161,6 +161,12 @@
     outline: none;
   }
   
+
+.reserve-btn, .menu-btn {
+  padding: 10px;
+  text-decoration: none;
+}
+
   .reserve-btn {
     background-color: var(--primary-red);
     color: white;
