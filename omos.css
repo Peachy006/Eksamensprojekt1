@@ -1,0 +1,234 @@
+/* CSS for About Us Section */
+:root {
+    --primary-red: #9d0208;
+    --primary-sand: #af9164;
+    --light-sand: #efe5d5;
+    --dark-text: #333333;
+    --light-text: #ffffff;
+    --transition-speed: 0.3s;
+  }
+  
+  /* General Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-text);
+    line-height: 1.6;
+  }
+  
+  /* About Section Styles */
+  .about-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #fffffff5 60%, var(--light-sand) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-content {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .about-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--dark-text);
+  }
+  
+  .highlight {
+    color: var(--primary-red);
+    position: relative;
+  }
+  
+  .divider {
+    height: 3px;
+    width: 80px;
+    background-color: var(--primary-sand);
+    margin: 1rem auto;
+    border-radius: 2px;
+  }
+  
+  .about-description {
+    font-size: 1.5rem;
+    color: var(--primary-sand);
+    margin-bottom: 3rem;
+    font-style: italic;
+  }
+  
+  /* Story Container */
+  .story-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    text-align: left;
+  }
+  
+  .story-block {
+    flex: 1 1 400px;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid var(--primary-red);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  }
+  
+  .story-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .story-block h2 {
+    color: var(--primary-red);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+  
+  .story-block p {
+    margin-bottom: 1rem;
+    color: var(--dark-text);
+    line-height: 1.7;
+  }
+  
+  /* Features */
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  .feature {
+    flex: 1 1 250px;
+    max-width: 300px;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform var(--transition-speed);
+  }
+  
+  .feature:hover {
+    transform: translateY(-8px);
+  }
+  
+  .feature-icon {
+    font-size: 2.5rem;
+    color: var(--primary-sand);
+    margin-bottom: 1rem;
+  }
+  
+  .feature h3 {
+    font-size: 1.5rem;
+    color: var(--primary-red);
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature p {
+    color: var(--dark-text);
+  }
+  
+  /* CTA Buttons */
+  .cta {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .cta button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    border: none;
+    outline: none;
+  }
+  
+  .reserve-btn {
+    background-color: var(--primary-red);
+    color: white;
+  }
+  
+  .reserve-btn:hover {
+    background-color: #7f0106;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(157, 2, 8, 0.3);
+  }
+  
+  .menu-btn {
+    background-color: transparent;
+    color: var(--primary-red);
+    border: 2px solid var(--primary-red) !important;
+  }
+  
+  .menu-btn:hover {
+    background-color: rgba(157, 2, 8, 0.08);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(157, 2, 8, 0.1);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 992px) {
+    .about-title {
+      font-size: 3rem;
+    }
+    
+    .about-description {
+      font-size: 1.3rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about-title {
+      font-size: 2.5rem;
+    }
+    
+    .about-description {
+      font-size: 1.1rem;
+    }
+    
+    .story-block {
+      padding: 1.5rem;
+    }
+    
+    .story-block h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .about-section {
+      padding: 2rem 1rem;
+    }
+    
+    .about-title {
+      font-size: 2rem;
+    }
+    
+    .feature {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+    
+    .cta button {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
