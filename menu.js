@@ -1,56 +1,48 @@
-// Simple animation and interactivity for the menu section
-document.addEventListener('DOMContentLoaded', function() {
-    // Animate menu items on scroll
-    const menuItems = document.querySelectorAll('.menu-item');
-    
-    // Check if IntersectionObserver is supported
-    if ('IntersectionObserver' in window) {
-      const menuObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = 1;
-            entry.target.style.transform = 'translateY(0)';
-            menuObserver.unobserve(entry.target);
-          }
-        });
-      }, {
-        root: null,
-        threshold: 0.1,
-        rootMargin: '0px'
+// kigger om page er loadet
+document.addEventListener('DOMContentLoaded', () => {
+  const menuItems = document.querySelectorAll('.menu-item');
+
+  //kigger om den uderstøtter det der seje loading noget
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
       });
-      
-      // Initialize menu items with opacity 0 and observe them
-      menuItems.forEach((item, index) => {
-        item.style.opacity = 0;
-        item.style.transform = 'translateY(20px)';
-        item.style.transition = `all 0.5s ease ${index * 0.1}s`;
-        menuObserver.observe(item);
-      });
-    } else {
-      // Fallback for browsers that don't support IntersectionObserver
-      menuItems.forEach(item => {
-        item.style.opacity = 1;
-        item.style.transform = 'translateY(0)';
-      });
-    }
-    
-    // Add hover effects for menu items
-    menuItems.forEach(item => {
-      item.addEventListener('mouseenter', function() {
-        this.querySelector('h3').style.color = '#9d0208';
-      });
-      
-      item.addEventListener('mouseleave', function() {
-        this.querySelector('h3').style.color = '';
-      });
+    }, { threshold: 0.1 });
+
+    // Giv hvert element en lille forsinkelse i rækkefølge
+    menuItems.forEach((item, i) => {
+      item.style.opacity = '0';
+      item.style.transform = 'translateY(20px)';
+      item.style.transition = `opacity 0.5s ease ${i * 0.1}s, transform 0.5s ease ${i * 0.1}s`;
+      observer.observe(item);
     });
-    
-    // Simple filtering functionality - for future enhancement
-    const setupFiltering = () => {
-      // This is a placeholder for potential filtering functionality
-      // Can be expanded later with category buttons
-      console.log('Menu filtering ready for implementation');
-    };
-    
-    setupFiltering();
+  } else {
+    // Hvis observer ikke virker
+    menuItems.forEach(item => {
+      item.style.opacity = '1';
+      item.style.transform = 'translateY(0)';
+    });
+  }
+
+  // Hover-effekt: skift farve på h3
+  menuItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      const heading = item.querySelector('h3');
+      if (heading) heading.style.color = '#9d0208';
+    });
+
+    item.addEventListener('mouseleave', () => {
+      const heading = item.querySelector('h3');
+      if (heading) heading.style.color = '';
+    });
   });
+
+  // Klar til filtrering senere
+  console.log('Filtering is not implemented yet.');
+});

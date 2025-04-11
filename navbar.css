@@ -44,7 +44,19 @@ body {
     padding-right: 30px;
 }
 
-.navdiv a {
+.nava1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Big Shoulders";
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: #333;
+    text-decoration: none;
+}
+
+.nava {
     color: #333;
     text-decoration: none;
     display: flex;

@@ -116,10 +116,11 @@
 
   /* Hero section */
   .hero {
-    background-color: var(--black);
+    background: var(--black);
     color: white;
     text-align: center;
     padding: 6rem 10%;
+    background-size: cover;
   }
 
   .hero h2 {
