@@ -17,6 +17,13 @@ fetch('navbar.html')
 })
 .catch(error => console.log(error));
 
+fetch('footer.html')
+.then(response => response.text())
+.then(data => {
+    document.getElementById('footer').innerHTML = data;
+})
+.catch(error => console.log(error));
+
 document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('a[href^="#"]');
     
