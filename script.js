@@ -24,6 +24,9 @@ fetch('footer.html')
 })
 .catch(error => console.log(error));
 
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('a[href^="#"]');
     
@@ -43,3 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   });
+
+
+
